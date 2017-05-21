@@ -1,5 +1,5 @@
 body{
-	background-color: #644a6d;
+	background-color: #8f8d90;
 	font: 18px/22px arial,verdana;
 	color: #eee;
 }
@@ -17,12 +17,17 @@ header h1{
 	margin-left: 20px;
 
 }
+
+header h1 a{
+	color: #fff;
+}
+
 .container{
-	width: 950px;
+	width: 100vw;
 	margin: 0 auto;
 }
 .item{
-	width: 600px;
+	width: 30vw;
 	margin: 20px auto;
 	
 	
@@ -32,18 +37,20 @@ header h1{
 	flex-direction: row;
 	border: 2px solid transparent;
 	transition: all .2s linear;
+	color: #212121;
+	background-color: #fff;
 
 }
 
 
 .item:hover{
-	border: 2px solid #874f9a;
-	color: #212121;
-	background-color: rgba(255,255,255,0.4);
+	/*border: 2px solid #454545;*/
+	transform: translateY(-2px);
+	box-shadow: 5px 5px 10px #333;
 }
-.title{
+.item .title{
 	flex-grow: 2;
-	text-align: center;
+	text-align: left;
 }
 .row{
 	display: flex;
@@ -72,3 +79,42 @@ h2{
 	font-size: 2em;
 	margin-top: 20px;
 }
+
+.title a{
+	text-decoration: none;
+	color: #000;
+	
+
+}
+
+.details{
+	width: 50vw;
+	margin: 30px auto;
+	border-radius: 6px;
+	background: #fff;
+	color: #212121;
+	padding: 30px;
+}
+
+.details .title{
+	text-align: center;
+	padding: 10px 0;
+	font-size: 30px;
+}
+
+.details .status{
+	float: right;
+
+}
+
+.details .status a{
+	color: #757575;
+	font-size: 16px;
+}
+
+.details .info{
+	clear: both;
+	padding: 10px;
+}
+
+

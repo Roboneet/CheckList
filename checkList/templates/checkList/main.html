@@ -1,44 +1,19 @@
-{% load static %}
-<!DOCTYPE html>
-
-<html>
-	<head>
-		<title>Check List</title>
-		<link rel="stylesheet" href="{% static 'stylesheets/resets.css' %}">
-		<link rel="stylesheet" href="{% static 'stylesheets/style.css' %}">
-	</head>
-	<body>
-		<header>
-			<h1>Awesome List : College Stuff</h1>
-
-		</header>
-		<section class="row">
-			<section class="col-1">
-				<div class="container">
-				<ul>
-					{% for item in items %}
+{% extends 'checkList/base.html' %}
+	{% block content %}
+		<ul>
+			{% for item in items %}
 					<li class="item">
 						
+						
+						<div class="title"><a href="{% url 'item_detail' pk=item.pk %}">{{item.title}}</a></div>
 						<div class="status"><a>
 							{% if item.tick %}
 							Ticked
 							{% else %}
 							Not ticked
 							{% endif %}</a></div>
-						<div class="title">{{item.title}}</div>
-
 					
 					</li>
-					{% endfor %}
-				</ul>
-				</div>
-			</section>
-			<!-- <section class="col-2">
-				<h2>Curtain</h2>
-				<section class="">
-					
-				</section>
-			</section> -->
-
-	</body>
-</html>
+			{% endfor %}
+		</ul>
+	{% endblock %}

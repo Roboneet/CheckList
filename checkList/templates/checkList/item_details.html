@@ -1,0 +1,14 @@
+{% extends 'checkList/base.html' %}
+	{% block content %}
+		<div class="details">
+			<div class="title">{{item.title}}</div>
+			<div class="status"><a>
+							{% if item.tick %}
+							Ticked
+							{% else %}
+							Not ticked
+							{% endif %}</a></div>
+
+			<div class="info">{{item.info}}</div>
+		</div>
+	{% endblock %}
