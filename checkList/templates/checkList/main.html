@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html>
 	<head>
 		<title>Check List</title>
-		<link rel="stylesheet" href="../../static/stylesheets/resets.css">
-		<link rel="stylesheet" href="../../static/stylesheets/style.css">
+		<link rel="stylesheet" href="{% static 'stylesheets/resets.css' %}">
+		<link rel="stylesheet" href="{% static 'stylesheets/style.css' %}">
 	</head>
 	<body>
 		<header>
@@ -14,24 +15,30 @@
 		<section class="row">
 			<section class="col-1">
 				<div class="container">
-					<div class="item">
-						<div class="status">Not ticked</div>
-						<div class="title">Curtains</div>
+				<ul>
+					{% for item in items %}
+					<li class="item">
+						
+						<div class="status"><a>
+							{% if item.tick %}
+							Ticked
+							{% else %}
+							Not ticked
+							{% endif %}</a></div>
+						<div class="title">{{item.title}}</div>
 
-					</div>
-					<div class="item">
-						<div class="status">Not ticked</div>
-						<div class="title">Curtains</div>	
-					</div>
-
+					
+					</li>
+					{% endfor %}
+				</ul>
 				</div>
 			</section>
-			<section class="col-2">
+			<!-- <section class="col-2">
 				<h2>Curtain</h2>
 				<section class="">
 					
 				</section>
-			</section>
+			</section> -->
 
 	</body>
 </html>
