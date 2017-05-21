@@ -1,0 +1,12 @@
+{% extends 'checkList/base.html' %}
+{% block content%}
+	<div class="item_new_form">
+		<h1>New Item</h1>
+		<form method="POST">{% csrf_token %}
+			{{ form.as_p }}
+
+			<button type="submit" class="btn">Save</button>
+		</form>
+		
+	</div>
+{% endblock%}

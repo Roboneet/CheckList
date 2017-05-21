@@ -10,7 +10,9 @@
 	<body>
 		<header>
 			<h1><a href='/'>Awesome List : College Stuff</a></h1>
-
+			{% if user.is_authenticated %}
+				<button class="item_new"><a href="{% url 'item_new'  %}">+</a></button>
+			{% endif %}
 		</header>
 		<section class="row">
 			<section class="col-1">

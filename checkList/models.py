@@ -11,10 +11,12 @@ class Item(models.Model):
 	def __unicode__(self):
 		return self.title
 
-	def tick(self):
+	def put_tick(self):
 		self.tick = True
 		self.save()
 
+	def get_tick(self):
+		return self.tick
 
 
 

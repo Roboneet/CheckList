@@ -1,13 +1,14 @@
 body{
 	background-color: #8f8d90;
 	font: 18px/22px arial,verdana;
-	color: #eee;
+	color: #212121;
 }
 header{
 	background: #212121;
 	
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 	font-size: 24px;
+	overflow-y: contain;
 }
 
 header h1{
@@ -38,7 +39,7 @@ header h1 a{
 	border: 2px solid transparent;
 	transition: all .2s linear;
 	color: #212121;
-	background-color: #fff;
+	background-color: #efefef;
 
 }
 
@@ -47,6 +48,7 @@ header h1 a{
 	/*border: 2px solid #454545;*/
 	transform: translateY(-2px);
 	box-shadow: 5px 5px 10px #333;
+	background-color: #fff;
 }
 .item .title{
 	flex-grow: 2;
@@ -94,6 +96,7 @@ h2{
 	background: #fff;
 	color: #212121;
 	padding: 30px;
+	box-shadow: 5px 5px 10px #333;
 }
 
 .details .title{
@@ -118,3 +121,105 @@ h2{
 }
 
 
+.item_new{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	border-width: 0;
+	background: #eee;
+	
+	
+	margin: 0;
+	border-radius: 2px;
+}
+.item_new a{
+	color: #212121;
+	font-size: 25px;
+	line-height: 25px;
+	margin: 0;
+	
+}
+
+
+.item_new_form{
+	width: 30vw;
+	margin: 30px auto;
+	background: #eee;
+	color: #212121;
+	padding: 30px;
+}
+
+.item_new_form h1{
+	text-align: center;
+	font-size: 30px;
+}
+
+.item_new_form label{
+	display: block;
+}
+
+.item_new_form form{
+	margin-top: 30px;
+}
+
+.item_new_form input,
+.item_new_form textarea{
+	border-radius: 6px;
+	border-width: 0;
+	height: 30px;
+	font-size: 16px;
+	background:#b9b5b5;
+	color: #fff;
+}
+
+.item_new_form textarea{
+	height: 100px;
+}
+
+.item_new_form input:focus,
+.item_new_form textarea:focus{
+	background: #6f6b6b;
+	
+	box-shadow: inset 0 2px 5px #000;
+
+}
+
+.item_new_form button{
+	margin: 0 auto;
+	display: block;
+}
+
+.btn{
+	height: 30px;
+	background: #b9b5b5;
+	box-shadow: 0 5px 0 #6f6b6b;
+	font-size: 20px;
+	width: 70px;
+	border-radius: 5px;
+	border-width: 0;
+	transition: all .2s linear;
+}
+
+.item_new_form p{
+	margin: 20px 0;
+}
+
+.btn:active{
+	transform: translateY(3px);
+	box-shadow: 0 2px 0 #6f6b6b;
+}
+
+.status .btn{
+	text-align: center;
+	line-height:30px;	
+}
+
+.status .btn a{
+	color: #fff;
+}
+
+.ticked{
+	box-shadow: 0 0 0 #000;
+	background-color: transparent;
+	color: #333;
+}

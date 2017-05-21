@@ -2,12 +2,17 @@
 	{% block content %}
 		<div class="details">
 			<div class="title">{{item.title}}</div>
-			<div class="status"><a>
+			<div class="status">
 							{% if item.tick %}
-							Ticked
+								<div class="ticked btn">Ticked</div>
 							{% else %}
-							Not ticked
-							{% endif %}</a></div>
+								{% if user.is_authenticated %}
+									<div class="btn"><a href="{% url 'item_tick' pk=item.pk %}">Tick</a></div>
+								{% else %}
+									Not ticked
+								{% endif %}
+
+							{% endif %}</div>
 
 			<div class="info">{{item.info}}</div>
 		</div>
