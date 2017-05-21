@@ -1,0 +1,11 @@
+add tags to items
+show user specific list and public one for a tag
+add anonymous option for new items
+
+sort checked and unchecked items
+replace "tick" by tick images
+add image field for items
+
+Add a navbar
+Make the site responsive
+Ajax -ify it all.. :D >> next big task
