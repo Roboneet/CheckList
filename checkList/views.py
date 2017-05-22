@@ -33,3 +33,9 @@ def item_tick(request, pk):
 	item.put_tick()
 	print item.tick
 	return redirect('item_detail',item.pk)
+
+
+def item_delete(request,pk):
+	item = get_object_or_404(Item, pk=pk)
+	item.delete()
+	return redirect('index')

@@ -2,6 +2,10 @@
 	{% block content %}
 		<div class="details">
 			<div class="title">{{item.title}}</div>
+			{% if user.is_authenticated %}
+			<div class="delete btn"><a href="{% url 'item_delete' pk=item.pk %}">Delete</a></div>
+			<div class="edit btn"><a href="/">Edit</a></div>
+			{% endif %}
 			<div class="status">
 							{% if item.tick %}
 								<div class="ticked">Ticked</div>
@@ -13,8 +17,7 @@
 								{% endif %}
 
 							{% endif %}</div>
-			<div class="edit btn">Edit</div>
-			<div class="delete dtn">X</div>
+			
 			<div class="info">{{item.info}}</div>
 		</div>
 	{% endblock %}

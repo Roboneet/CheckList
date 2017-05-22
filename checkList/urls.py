@@ -6,4 +6,5 @@ urlpatterns = [
 	url(r'^item/(?P<pk>\d+)$',views.item_detail, name="item_detail"),
 	url(r'^item/new$',views.item_new, name="item_new"),
 	url(r'^item/tick/(?P<pk>\d+)$',views.item_tick, name="item_tick"),
+	url(r'^item/(?P<pk>\d+)/delete$',views.item_delete, name="item_delete"),
 ]

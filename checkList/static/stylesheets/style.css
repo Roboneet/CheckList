@@ -190,6 +190,10 @@ h2{
 }
 
 .btn{
+	text-align: center;
+	line-height: 30px;
+	color: #757575;
+	font-size: 20px;
 	height: 30px;
 	background: #b9b5b5;
 	box-shadow: 5px 5px 3px #6f6b6b;
@@ -198,6 +202,7 @@ h2{
 	border-radius: 2px;
 	border-width: 0;
 	transition: all .2s linear;
+	margin: 0 5px;
 }
 
 .item_new_form p{
@@ -210,12 +215,14 @@ h2{
 }
 
 .status .btn{
-	text-align: center;
-	line-height:30px;	
+	background:#ddd;
+
 }
 
 .status .btn a{
 	color: #fff;
+	font-size: 20px;
+
 }
 
 .ticked{
@@ -234,6 +241,11 @@ h2{
 
 }
 
+.edit, .delete{
+	float: right;
+}
+
+
 
 
 /********************************
@@ -247,3 +259,5 @@ making it responsive
 		width: 400px;
 	}
 }
+
+/*********************************/
