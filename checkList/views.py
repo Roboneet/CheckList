@@ -4,8 +4,9 @@ from .forms import ItemForm
 # Create your views here.
 
 def index(request):
-	items = Item.objects.all()
-	return render(request,'checkList/main.html',{'items':items})
+	ticked_items = Item.objects.filter(tick=True)
+	unticked_items = Item.objects.filter(tick=False)
+	return render(request,'checkList/main.html',{'ticked':ticked_items,'unticked':unticked_items})
 
 
 def item_detail(request,pk):

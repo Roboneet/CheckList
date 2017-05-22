@@ -28,7 +28,7 @@ header h1 a{
 	margin: 0 auto;
 }
 .item{
-	width: 30vw;
+	width: 70vw;
 	margin: 20px auto;
 	
 	
@@ -192,10 +192,10 @@ h2{
 .btn{
 	height: 30px;
 	background: #b9b5b5;
-	box-shadow: 0 5px 0 #6f6b6b;
+	box-shadow: 5px 5px 3px #6f6b6b;
 	font-size: 20px;
 	width: 70px;
-	border-radius: 5px;
+	border-radius: 2px;
 	border-width: 0;
 	transition: all .2s linear;
 }
@@ -205,8 +205,8 @@ h2{
 }
 
 .btn:active{
-	transform: translateY(3px);
-	box-shadow: 0 2px 0 #6f6b6b;
+	transform: translate(3px);
+	box-shadow: 2px 2px 2px #6f6b6b;
 }
 
 .status .btn{
@@ -222,4 +222,28 @@ h2{
 	box-shadow: 0 0 0 #000;
 	background-color: transparent;
 	color: #333;
+}
+
+.done{
+	background-color: #ddd;
+
+}
+
+.done:hover{
+	background: #eee;
+
+}
+
+
+
+/********************************
+
+making it responsive
+
+*********************************/
+
+@media only screen and (min-width:600px){
+	.item{
+		width: 400px;
+	}
 }

@@ -1,17 +1,21 @@
 {% extends 'checkList/base.html' %}
 	{% block content %}
 		<ul>
-			{% for item in items %}
+			{% for item in unticked %}
 					<li class="item">
 						
 						
 						<div class="title"><a href="{% url 'item_detail' pk=item.pk %}">{{item.title}}</a></div>
-						<div class="status"><a>
-							{% if item.tick %}
-							Ticked
-							{% else %}
-							Not ticked
-							{% endif %}</a></div>
+						<div class="status">Not ticked</div>
+					
+					</li>
+			{% endfor %}
+			{% for item in ticked %}
+					<li class="item done">
+						
+						
+						<div class="title"><a href="{% url 'item_detail' pk=item.pk %}">{{item.title}}</a></div>
+						<div class="status">Ticked</div>
 					
 					</li>
 			{% endfor %}

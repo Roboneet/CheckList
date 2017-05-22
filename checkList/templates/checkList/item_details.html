@@ -4,7 +4,7 @@
 			<div class="title">{{item.title}}</div>
 			<div class="status">
 							{% if item.tick %}
-								<div class="ticked btn">Ticked</div>
+								<div class="ticked">Ticked</div>
 							{% else %}
 								{% if user.is_authenticated %}
 									<div class="btn"><a href="{% url 'item_tick' pk=item.pk %}">Tick</a></div>
@@ -13,7 +13,8 @@
 								{% endif %}
 
 							{% endif %}</div>
-
+			<div class="edit btn">Edit</div>
+			<div class="delete dtn">X</div>
 			<div class="info">{{item.info}}</div>
 		</div>
 	{% endblock %}
