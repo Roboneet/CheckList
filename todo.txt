@@ -2,10 +2,13 @@ add tags to items
 show user specific list and public one for a tag
 add anonymous option for new items
 
-sort checked and unchecked items
+sort checked and unchecked items >> DONE
 replace "tick" by tick images
 add image field for items
 
 Add a navbar
-Make the site responsive
+Make the site responsive >> DONE
 Ajax -ify it all.. :D >> next big task
+
+Add delete option>>DONE
+Add edit option 
